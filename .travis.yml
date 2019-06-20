@@ -8,9 +8,6 @@ before_install:
 script:
   - docker run -e CI=true deguir/react npm run test
 
-prod:
-  - docker build -t deguir/prod .
-
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
