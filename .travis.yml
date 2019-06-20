@@ -8,10 +8,6 @@ before_install:
 script:
   - docker run -e CI=true deguir/react npm run test
 
-prod:
-  - docker build -t deguir/prod .
-
-
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
@@ -23,4 +19,4 @@ deploy:
     branch: master
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: 
-  secure: "$AWS_SECRET_KEY"
+    secure: "$AWS_SECRET_KEY"
