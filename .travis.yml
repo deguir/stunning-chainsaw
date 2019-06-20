@@ -11,7 +11,6 @@ script:
 prod:
   - docker build -t deguir/prod .
 
-
   deploy:
     provider: elasticbeanstalk
     region: "us-east-1"
