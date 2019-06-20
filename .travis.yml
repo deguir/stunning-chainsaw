@@ -12,15 +12,15 @@ prod:
   - docker build -t deguir/prod .
 
 
-  deploy:
-    provider: elasticbeanstalk
-    region: "us-east-1"
-    app: "react"
-    env: "react-env"
-    bucket_name: "elasticbeanstalk-us-east-1-749508254340"
-    bucket_path: "react"
-    on:
-      branch: master
-    access_key_id: "$AWS_ACCESS_KEY"
-    secret_access_key: 
-      secure: "$AWS_SECRET_KEY"
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "react"
+  env: "react-env"
+  bucket_name: "elasticbeanstalk-us-east-1-749508254340"
+  bucket_path: "react"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: 
+  secure: "$AWS_SECRET_KEY"
